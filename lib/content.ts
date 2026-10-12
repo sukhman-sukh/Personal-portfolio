@@ -20,11 +20,11 @@ export const QUOTE = {
 };
 
 export const INTRO =
-  "I'm Sukhman Singh, an engineer from IIT Roorkee. I take systems apart until I understand them, then build my own. Right now that's Revoca.";
+  "I'm Sukhman Singh, an engineer from IIT\u00a0Roorkee. These days I'm building JARVIS, my own personal agent.";
 
 export const ABOUT = {
   title: "The short version",
-  lead: "I'm Sukhman, and I've never been able to leave a working system alone. If something runs, I want to know why, and the fastest way I know to find out is to break it and build it back myself. It's the thing I'd do even if nobody paid me, which is probably why most of my best work started at 2am.",
+  lead: "I'm Sukhman. I learn by taking systems apart and building my own version of them. It's how I spend most of my nights.",
   rangeIntro: "That habit has dragged me all over the stack.",
   range: [
     { domain: "Low-level systems", detail: "A Game Boy emulator in C++, with the CPU and PPU built cycle by cycle from the spec." },
