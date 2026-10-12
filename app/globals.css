@@ -497,10 +497,14 @@ main > section {
 
 .hero__intro {
   margin: 0;
-  max-width: 36ch;
-  text-wrap: balance;
+  max-width: 40ch;
+  text-wrap: pretty;
   font-size: clamp(1.125rem, 1.6vw, 1.375rem);
   line-height: 1.5;
+}
+
+.hero__intro-lead {
+  display: block;
 }
 
 .hero__cue {

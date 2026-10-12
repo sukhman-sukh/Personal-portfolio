@@ -61,7 +61,9 @@ export function Hero() {
       </div>
 
       <div className="hero__foot">
-        <p className="hero__intro">{INTRO}</p>
+        <p className="hero__intro">
+          <span className="hero__intro-lead">{INTRO[0]}</span> {INTRO[1]}
+        </p>
         <a className="hero__cue" href="#experience">
           Scroll to light the fuse
         </a>

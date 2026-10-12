@@ -19,8 +19,11 @@ export const QUOTE = {
   tail: "and let it kill you",
 };
 
-export const INTRO =
-  "I'm Sukhman Singh, an engineer from IIT\u00a0Roorkee. These days I'm building JARVIS, my own personal agent.";
+// First sentence sits on its own line.
+export const INTRO = [
+  "I'm Sukhman Singh, an engineer from IIT\u00a0Roorkee.",
+  "If you ever catch me talking to my phone, it's probably JARVIS.",
+];
 
 export const ABOUT = {
   title: "The short version",
