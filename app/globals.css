@@ -925,6 +925,13 @@ main > section {
   bottom: 2.5rem;
 }
 
+/* Label hangs to the left of its spark, for sparks that crowd the next one. */
+.hfleck.is-flip .hfleck__label {
+  left: auto;
+  right: -0.3rem;
+  text-align: right;
+}
+
 .hfleck.is-lit .hfleck__label {
   color: var(--bone);
 }

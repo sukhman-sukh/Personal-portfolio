@@ -177,7 +177,7 @@ export function Fuse() {
               {SPARKS.map((s, i) => (
                 <span
                   key={s.id}
-                  className={`hfleck lane-${i % 2}`}
+                  className={`hfleck lane-${i % 2}${s.flip ? " is-flip" : ""}`}
                   style={{ left: pct(fuseFrac(s.date)) }}
                   data-at={fuseFrac(s.date)}
                   tabIndex={0}
@@ -201,7 +201,7 @@ export function Fuse() {
                   <button type="button" className="hstop__card" onClick={() => open({ type: "stop", stop })}>
                     <span className="hstop__when">{fmtPeriod(stop)}</span>
                     <span className="hstop__org">{stop.org}</span>
-                    <span className="hstop__role">{stop.role}</span>
+                    {stop.role && <span className="hstop__role">{stop.role}</span>}
                     <span className="hstop__more">
                       <span>
                         <span className="hstop__summary">{stop.summary}</span>
@@ -238,7 +238,7 @@ export function Fuse() {
                   <button type="button" className="vstop__card" onClick={() => open({ type: "stop", stop: e.stop })}>
                     <span className="vstop__when">{fmtPeriod(e.stop)}</span>
                     <span className="vstop__org">{e.stop.org}</span>
-                    <span className="vstop__role">{e.stop.role}</span>
+                    {e.stop.role && <span className="vstop__role">{e.stop.role}</span>}
                     <span className="vstop__summary">{e.stop.summary}</span>
                   </button>
                 </li>

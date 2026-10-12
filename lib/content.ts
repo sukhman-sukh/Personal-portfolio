@@ -82,7 +82,7 @@ export const STOPS: Stop[] = [
   {
     id: "sdslabs",
     org: "SDSLabs",
-    role: "Joint Secretary",
+    role: "",
     start: "2023-04",
     end: "2026-05",
     kind: "job",
@@ -128,11 +128,11 @@ export const STOPS: Stop[] = [
   {
     id: "libp2p",
     org: "py-libp2p",
-    role: "Software Engineer Intern",
+    role: "Module Maintainer",
     start: "2025-08",
-    end: "2025-10",
+    end: "2025-11",
     kind: "job",
-    summary: "Shipped NAT traversal for peers behind symmetric NATs, plus WebRTC and WebRTC-Direct transports.",
+    summary: "Maintained modules of the Python libp2p stack. Shipped NAT traversal and WebRTC transports.",
     points: [
       "Shipped NAT traversal with circuit relay and hole punching, so peers behind symmetric NATs can reach each other.",
       "Implemented WebRTC and WebRTC-Direct as transport protocols in the decentralized network stack.",
@@ -160,10 +160,10 @@ export const STOPS: Stop[] = [
 ];
 
 // Small sparks on the cord.
-export const SPARKS: { id: string; date: string; label: string; detail: string }[] = [
+export const SPARKS: { id: string; date: string; label: string; detail: string; flip?: boolean }[] = [
   { id: "ondc", date: "2024-03", label: "ONDC, top 5", detail: "Top 5 of 100+ at Build for Bharat" },
   { id: "ethsg", date: "2024-09", label: "ETH-Singapore", detail: "Won the AirDAO track" },
-  { id: "ethin", date: "2024-12", label: "ETH-India", detail: "Won Lit Protocol and CDP tracks" },
+  { id: "ethin", date: "2024-12", label: "ETH-India", detail: "Won Lit Protocol and CDP tracks", flip: true },
   { id: "piwot", date: "2025-01", label: "Pan-IIT PIWOT", detail: "Won, contract lifecycle platform" },
 ];
 
@@ -296,7 +296,7 @@ export const PROJECTS: Project[] = [
   {
     id: "optimal-storage",
     name: "Optimal Storage",
-    lang: "Shell",
+    lang: "Go",
     status: "won",
     statusLabel: "Top 5, ONDC",
     summary: "30,000+ pin codes across 10M merchants with lookups around 1ms. Top 5 of 100+ at ONDC Build for Bharat.",
@@ -306,7 +306,7 @@ export const PROJECTS: Project[] = [
       "Designed storage for 30,000+ pin codes across 10M merchants with real-time retrieval (round trip around 1ms), using geo-sharded databases and caching layers.",
       "Automated deployment to Azure with Ansible playbooks and Docker.",
     ],
-    topics: ["geo-sharding", "caching", "azure", "ansible"],
+    topics: ["go", "geo-sharding", "caching", "azure"],
   },
   {
     id: "addao",

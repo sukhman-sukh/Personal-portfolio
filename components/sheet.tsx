@@ -90,7 +90,7 @@ function StopDetail({ item }: { item: Extract<SheetItem, { type: "stop" }> }) {
   return (
     <article className="detail">
       <h2 id="sheet-title" className="detail__title">{s.org}</h2>
-      <p className="detail__role">{s.role}</p>
+      {s.role && <p className="detail__role">{s.role}</p>}
       <p className="detail__when">
         {fmtPeriod(s)}
         {isBurning(s) && <span className="detail__burning">Still burning</span>}
