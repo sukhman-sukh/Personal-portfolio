@@ -17,7 +17,6 @@ export const LINKS: { label: string; href: string }[] = [
 
 export const QUOTE = {
   tail: "and let it kill you",
-  by: "Charles Bukowski, probably",
 };
 
 export const INTRO =

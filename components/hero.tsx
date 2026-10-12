@@ -59,7 +59,6 @@ export function Hero() {
         </h1>
         <Portrait file={portrait} />
       </div>
-      <p className="hero__by">{QUOTE.by}</p>
 
       <div className="hero__foot">
         <p className="hero__intro">{INTRO}</p>

@@ -486,13 +486,6 @@ main > section {
   }
 }
 
-.hero__by {
-  margin: 0;
-  font-style: italic;
-  font-size: var(--s0);
-  color: var(--ash);
-}
-
 .hero__foot {
   display: flex;
   flex-wrap: wrap;
