@@ -1,6 +1,6 @@
 // All site copy and data lives here. Edit this file, not the components.
-// Role and project details come from the 1-page resume (Dev_Resume_1Page_Sukhman_.pdf).
-// Lines marked TODO(sukhman) are guesses or gaps. Dates get checked against the newer resume.
+// Role and project details come from his resumes (old 1-page PDF and the October 2026 LaTeX one).
+// Lines marked TODO(sukhman) are guesses or gaps. Dates come from the October 2026 resume.
 
 export const PERSON = {
   name: "Sukhman Singh",
@@ -12,7 +12,7 @@ export const LINKS: { label: string; href: string }[] = [
   { label: "Book 30 minutes", href: "https://calendly.com/sukhmansinghsaluja/30min" },
   { label: "GitHub", href: "https://github.com/sukhman-sukh" },
   { label: "X", href: "https://x.com/SinghSukhman_/" },
-  // TODO(sukhman): add LinkedIn, e.g. { label: "LinkedIn", href: "https://www.linkedin.com/in/..." }
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/sukhman-singh-291a8b252/" },
 ];
 
 export const QUOTE = {
@@ -31,15 +31,15 @@ export const ABOUT = {
   rangeIntro: "That habit has dragged me all over the stack.",
   range: [
     { domain: "Low-level systems", detail: "A Game Boy emulator in C++, with the CPU and PPU built cycle by cycle from the spec." },
-    { domain: "Edge networking", detail: "packetXpress, a load balancer that filters and routes packets inside the Linux kernel with eBPF and XDP." },
+    { domain: "Edge networking", detail: "packetXpress, an L4 gateway in eBPF/XDP and Go: a bit-vector firewall and Maglev load balancing, inside the kernel." },
     { domain: "Network engineering", detail: "NAT traversal and WebRTC transports for py-libp2p, and a Bluetooth mesh for qaul that works without the internet." },
-    { domain: "Cloud and scale", detail: "CTF infrastructure for 1000+ players, pushed from 300 to 1500 requests a second, and lookups in about 1ms across 10M merchants." },
-    { domain: "AI and agents", detail: "Where I am now: JARVIS, memory layers for LLMs, and Revoca.", now: true },
+    { domain: "Cloud and scale", detail: "Hosting for AI-generated web apps at Abacus.AI, and CTF infrastructure for 1000+ players pushed from 300 to 1500 requests a second." },
+    { domain: "AI and agents", detail: "Where I am now: sandboxes and self-healing CI for coding agents at Abacus.AI, a hybrid RAG engine in Revoca, and JARVIS.", now: true },
   ],
   facts: [
     { term: "Studied", detail: "B.Tech in Computer Science and Engineering at IIT Roorkee, 2022 to 2026." },
     { term: "JEE Advanced", detail: "Top 0.05% of 1.2 million students." },
-    { term: "Usually writing", detail: "Rust, Go, Python and C++, with Docker, Kubernetes, Cilium and eBPF close by. On Arch, by the way." },
+    { term: "Usually writing", detail: "Python, Go, Rust, TypeScript and C/C++, with Docker, Kubernetes and eBPF close by. On Arch, by the way." },
     { term: "Reading", detail: "Designing Data-Intensive Applications. The Hard Thing About Hard Things." },
     { term: "Off the clock", detail: "F1 strategy calls, chess endgames I lose, and the same sad songs on repeat while I debug." },
   ],
@@ -70,7 +70,7 @@ export const STOPS: Stop[] = [
     org: "IIT Roorkee",
     role: "B.Tech, Computer Science and Engineering",
     start: "2022-08",
-    end: "2026-06", // TODO(sukhman): confirm from the newer resume
+    end: "2026-05",
     kind: "school",
     summary: "Where the fuse was lit. Came in through JEE Advanced in the top 0.05%, then spent most nights in a lab.",
     points: [
@@ -84,13 +84,13 @@ export const STOPS: Stop[] = [
     org: "SDSLabs",
     role: "Joint Secretary",
     start: "2023-04",
-    end: "now",
+    end: "2026-05",
     kind: "job",
-    summary: "Maintaining and scaling the lab's core infrastructure: internal CI pipelines and production deploys.",
+    summary: "Maintained and scaled the lab's core infrastructure and production deploys. Organised lectures and hackathons.",
     points: [
       "Maintained and scaled SDSLabs' core infrastructure, including internal CI pipelines and production deployments.",
       "Maintainer of Beast, the platform the lab uses to run national and intra-institute CTFs for 1000+ players.",
-      "Took part in hackathons and CTFs, and contributed to the lab's open-source projects.",
+      "Organised lectures and hackathons, and played a lot of CTFs.",
     ],
     worked: ["Docker", "CI/CD", "Linux", "Go"],
     link: { label: "Beast on GitHub", href: "https://github.com/sdslabs/beast" },
@@ -109,7 +109,7 @@ export const STOPS: Stop[] = [
       "Designed the high and low level models for peer detection and routing tables, which made the mesh more stable.",
     ],
     worked: ["Rust", "Bluetooth LE", "Mesh routing"],
-    link: { label: "qaul on GitHub", href: "https://github.com/qaul/qaul.net" },
+    link: { label: "The GSoC project", href: "https://summerofcode.withgoogle.com/programs/2024/projects/ydglU9hY" },
   },
   {
     id: "zoominfo",
@@ -143,31 +143,19 @@ export const STOPS: Stop[] = [
   {
     id: "abacus",
     org: "Abacus.AI",
-    role: "ML Platform Engineer Intern",
-    start: "2026-02", // TODO(sukhman): confirm from the newer resume
-    end: "2026-04",
-    kind: "job",
-    summary: "ML platform work on Abacus.AI's enterprise stack: training, serving and scaling LLM workloads.",
-    points: [
-      "Worked on the ML platform behind Abacus.AI's enterprise products.",
-      "Training, serving and scaling LLM workloads.",
-    ], // TODO(sukhman): replace with the bullets from the newer resume
-    worked: ["ML infrastructure", "LLM serving", "Python"],
-  },
-  {
-    id: "revoca",
-    org: "Revoca",
-    role: "Founder", // TODO(sukhman): confirm title
-    start: "2026-05", // TODO(sukhman): confirm start month
+    role: "AI Infrastructure Engineer",
+    start: "2026-02",
     end: "now",
-    kind: "venture",
-    summary: "Company memory that doesn't walk out the door. Still iterating.",
+    kind: "job",
+    summary: "Infrastructure for Abacus.AI's agentic products: sandboxes for the coding agent, app hosting, and CI that fixes itself.",
     points: [
-      "When people leave, the reasoning behind decisions goes with them. Revoca pulls context from GitHub, Slack, Discord and docs and stores it somewhere you can actually search.",
-      "Agents run inside Slack and Discord, and an MCP server brings the same memory into your IDE.",
+      "Joined as an AI Infrastructure Engineer intern in February 2026, full time since July 2026.",
+      "Build and run infrastructure for Abacus.AI's agentic AI products, and co-own its hosting service for AI-generated web apps.",
+      "Built a sandboxed environment where the company's internal coding agent carries out tasks safely and in isolation.",
+      "Own the CI/CD pipeline: end-to-end tests that each run in their own sandboxed copy of the platform, plus an agentic LLM system that diagnoses and fixes pipeline failures.",
     ],
-    worked: ["Agents", "Retrieval", "MCP", "Slack and Discord"],
-    link: { label: "Visit revocaai.xyz", href: "https://revocaai.xyz/" },
+    worked: ["Sandboxing", "CI/CD", "Kubernetes", "AI agents", "LLM evals"],
+    link: { label: "Visit abacus.ai", href: "https://abacus.ai" },
   },
 ];
 
@@ -215,14 +203,14 @@ export const PROJECTS: Project[] = [
     lang: "Py + TS",
     status: "burning",
     statusLabel: "Still iterating",
-    summary: "Company memory that doesn't walk out the door. Context from GitHub, Slack and docs, searchable.",
-    body: "Pulls context from GitHub, Slack, Discord and docs, and runs agents inside the tools your team already uses.",
+    summary: "An AI knowledge layer that turns a team's docs, GitHub, Slack, Discord, Telegram and calls into one brain.",
+    body: "Adaptive hybrid RAG with a query planner that routes across vector, knowledge-graph and timeline retrieval. 93% hit@5 on gbrain world-v1.",
     points: [
-      "Ingests GitHub, Slack, Discord and docs into one searchable memory.",
-      "Agents answer inside Slack and Discord, where the questions already get asked.",
-      "MCP-enabled, so the same memory is available from your IDE.",
+      "An AI knowledge layer that turns an org's docs, GitHub, Slack, Discord, Telegram and Meet calls into one brain.",
+      "Engineered an adaptive hybrid RAG pipeline: BM25 plus dense retrieval fused with RRF, cross-encoder reranking and RAPTOR, with a query planner routing across vector, knowledge-graph and timeline retrieval.",
+      "Benchmarked on gbrain world-v1: 93% hit@5 and 0.84 MRR overall, and 96% relational recall@5.",
     ],
-    topics: ["agents", "retrieval", "mcp"],
+    topics: ["rag", "knowledge graphs", "agents", "evals"],
     link: { label: "Visit revocaai.xyz", href: "https://revocaai.xyz/" },
   },
   {
@@ -245,16 +233,17 @@ export const PROJECTS: Project[] = [
   {
     id: "packetxpress",
     name: "packetXpress",
-    lang: "C",
+    lang: "C + Go",
     status: "shipped",
     statusLabel: "Shipped",
-    summary: "An eBPF/XDP cluster gateway that filters and balances packets before the network stack sees them.",
-    body: "Started because I wanted to know if the kernel datapath was actually faster. It was.",
+    summary: "An L4 cluster gateway in eBPF/XDP and Go: firewall, load balancer and packet profiler chained in the kernel.",
+    body: "A bit-vector firewall that skips the linear rule scan iptables does, and Maglev consistent hashing for the load balancer.",
     points: [
-      "An eBPF/XDP based cluster gateway that does packet filtering and load balancing.",
-      "Runs at the XDP hook, so packets are handled before they reach the kernel's network stack.",
+      "Built an L4 cluster gateway in eBPF/XDP and Go, chaining a firewall, load balancer and packet profiler through XDP tail calls.",
+      "Implemented an LBVS bit-vector firewall in XDP that matches 5-tuple rules without the linear rule scan iptables does.",
+      "Engineered a reverse proxy with TLS SNI and HTTP Host routing, Maglev consistent hashing and per-CPU conntrack DNAT.",
     ],
-    topics: ["ebpf", "xdp", "kernel", "load balancing"],
+    topics: ["ebpf", "xdp", "go", "load balancing", "firewall"],
     link: { label: "Source on GitHub", href: "https://github.com/sukhman-sukh/packetXpress" },
   },
   {
@@ -332,7 +321,7 @@ export const PROJECTS: Project[] = [
       "A privacy-first, agentic advertising platform built on AirDAO.",
     ],
     topics: ["web3", "airdao", "agents", "privacy"],
-    link: { label: "Source on GitHub", href: "https://github.com/sukhman-sukh/AdDao" },
+    link: { label: "See it on ETHGlobal", href: "https://ethglobal.com/showcase/aegis-ukp3p" },
   },
   {
     id: "onchain-persona",
@@ -347,6 +336,7 @@ export const PROJECTS: Project[] = [
       "An AI persona that replicates you on-chain.",
     ],
     topics: ["lit protocol", "cdp", "ai"],
+    link: { label: "See it on Devfolio", href: "https://devfolio.co/projects/aiavatar-caa2" },
   },
 ];
 
